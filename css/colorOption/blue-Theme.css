@@ -1,0 +1,84 @@
+.w3-orange, .w3-hover-orange:hover
+{
+     color: #000!important;
+    background-color: #009AFF!important;
+}
+.option-box .gear-check 
+{
+    padding: 5px;
+    color: #009AFF;
+    cursor: pointer;
+}
+.btn-warning 
+{
+    background-color: #009AFF;
+    border-color: #009AFF;
+}
+#tel 
+{
+    color: #009AFF;
+}
+#sup
+{
+color:#009AFF;
+}
+
+.form .tab-group .active a
+{
+    background: #009AFF;
+}
+
+#signup .field-wrap label .req
+{
+    color: #009AFF;
+}
+
+#signup .button
+{
+    background: #009AFF;
+}
+
+#login .field-wrap label .req
+{
+    color: #009AFF;
+}
+
+#login .button
+{
+    background: #009AFF;
+}
+
+#login .forgot a
+{
+    color: #009AFF;
+}
+
+.contact-form .cform .fsubmit
+{
+    background: #009AFF;    
+}
+
+.contact-info .c-info:hover
+{
+    box-shadow: 0 0 0 0.2rem rgb(0, 154, 255);
+}
+
+#flag .cf .continue
+{
+    background: #009AFF; 
+}
+
+#flag .cart .items .cartSection p.stockStatus
+{
+     color: #009AFF; 
+}
+
+#flag .btn:link, .btn:visited
+{
+     background: #009AFF !important;
+}
+
+.promoCode a.btn
+{
+     border: 1px solid #009AFF !important;
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+<html lang="en"dir="ltr">
+ <head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA compatible"content="IE=edge">
+ <meta name="viewport"content="width=device-width, initial-scale=1.0">
+ <link rel="icon"href="../logo/min/maglin.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="../css/bootstrap.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="../css/bsEdit.css"> 
+ <link rel="stylesheet" href="../css/colorOption/default-Theme.css">
+     
+     <style>
+     google-map {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.google-map iframe {
+    width: 100%;
+    height: 485px;
+    border: 0px;
+}
+ul.cform {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+ul.cform li {
+    margin-bottom: 30px;
+}
+ul.cform li:last-child {
+    margin: 0px;
+}
+ul.cform li.half {
+    width: 50%;
+    float: left;
+}
+.pl-15 {
+    padding-left: 15px;
+}
+.pr-15 {
+    padding-right: 15px;
+}
+ul.cform li.full {
+    width: 100%;
+    float: left;
+}
+ul.cform .form-control {
+    border: 2px solid #e1e1e1;
+    background: #fafafa;
+    color: #555555;
+    height: 53px;
+    line-height: 49px;
+    padding: 0 20px;
+}
+ul.cform textarea.textarea-control {
+    border: 2px solid #e1e1e1;
+    background: #fafafa;
+    color: #555555;
+    padding: 20px;
+    width: 100%;
+    height: 165px;
+    border-radius: 5px;
+}
+.cform .fsubmit {
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background: #ff9800;
+    border: 0px;
+    height: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cform .fsubmit:hover {
+    background: #d27f05;
+    color: #fff;
+}
+.contact-form h3 {
+    font-weight: 700;
+    margin: 0 0 25px;
+}
+.c-info {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding: 30px;
+}
+.c-info:hover {
+    box-shadow: 0 0 0 0.2rem rgba(255,152,0,1);
+}
+.contact-map-info h6, .c-info h6 {
+    font-weight: 600;
+    color: #333333;
+    font-size: 20px;
+}
+.contact-map-info p, .c-info p {
+    margin: 0px;
+    color: #555555;
+    font-size: 16px;
+    line-height: 26px;
+}
+.contact-info {
+    margin-top: 70px;
+}
+.contact-info h3 {
+    font-weight: 700;
+    margin: 0 0 25px;
+}
+.contact-form {
+    width: 100%;
+    float: left;
+}
+.mb60 {
+    margin-bottom: 60px;
+}
+.contact-map-info {
+    background: #fff;
+    border-radius: 5px;
+    width: 350px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    padding: 30px;
+}
+.contact-map-info ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.contact-map-info ul li {
+    margin-bottom: 30px;
+}
+.contact-map-info ul li:last-child {
+    margin: 0px;
+}
+.contact-page {
+    min-height: 100vh;
+    padding: 80px 0;
+    background: #f7f7f7;
+}
+
+     </style>
+ </head>
+ <body>
+  
+     <!--  Start Navbar-0 With W3 Organiztion Property  vertical-align: middle;-->
+<div class="w3-top  w3-orange w3-wide w3-padding w3-card"style="height:30px;">
+
+    <span  class="w3-bar-item"style="margin:auto;display: unset;padding: 0; vertical-align: super;position: relative;top: -4px;color: #FFF"><a title="Site Brand"href="#">
+                   </a>This Is Furniture Site</span>
+  
+                 <div class=" first-navbar w3-right w3-hide-small right-side">
+<!--
+                   <span class="w3-bar-item w3-button w3-color-white"style="display: unset;padding: 0; vertical-align: super;position: relative;top: -4px;"><a href="#"
+                    title="See Furniture"></a>Furniture</span>
+-->
+                   <a href="register.html"
+                     title="Follow Us"><span class="w3-bar-item fa fa-facebook-official"style="display: unset;padding: 0; vertical-align: super;position: relative;top:0;color: #FFF"></span></a>
+                    <a href="cart.html"
+                     title="Follow Us"><span class="w3-bar-item fa fa-shopping-cart"style="display: unset;padding: 0; vertical-align: super;position: relative;top:0;color: #FFF"></span></a>
+                  </div>
+
+</div>
+            <!-- End Navbar-0 With W3 Organiztion Property-->
+
+       <!--  Start Navbar With W3 Organiztion Property-->
+     
+<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center w3-card"
+     style="margin-top:32px;">
+ <!-- فى الشاشه الكبيره الاسم يختفى واللوجو والايكونز تظهر وفى الصغيره الاسم يظهر واللوجوه يختفى  -->
+
+ <a href="#" class="navbar-brand d-flex w-50 mr-auto w3-hide-large w3-hide-medium">     <!--  1  -->
+     Name</a>
+ 
+     <a href="#" class="navbar-brand d-flex w-50 mr-auto bg-visible md-visible sm-hidden
+                        xs-hidden w3-hide-small">                   <!--  2  -->
+      
+      <img class="img-responsive"title="logo"src="../logo/min/maglin.png"width="200px"height="50px;"></a>
+
+ 
+    <button class="navbar-toggler w3-grey w3-hover-white" type="button" 
+            data-toggle="collapse" data-target="#collapsibleNavbar">
+     
+        <span class="navbar-toggler-icon"></span>
+     <span class="sr-only">Toggle navigation</span>
+    </button>
+ 
+    <div class="navbar-collapse collapse w-100 h-142" id="collapsibleNavbar">
+        <ul class="navbar-nav w-100 justify-content-center"style="font-size:10px;">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+<!--
+            <li class="nav-item">
+                <a class="nav-link" href="//codeply.com">.EasyPay</a>
+            </li>
+-->
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.html">register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Product-Chairs.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+                     <li class="nav-item">
+                <a class="nav-link" href="cart.html">Contact Us</a>
+            </li>
+<!--  Start Color-Option Or Sitting Site Color-->
+   <section class="option-box">
+        <div class="color-option">
+            <h4>Color Option</h4>
+            <ul class="list-unstyled">
+                <li data-value="../css/colorOption/default-Theme.css"></li>
+                <li data-value="../css/colorOption/purple-Theme.css"></li>
+                <li data-value="../css/colorOption/blue-Theme.css"></li>
+                <li data-value="../css/colorOption/brown-Theme.css"></li>
+            </ul>
+        </div>
+        <i class= "fa fa-square fa-2x gear-check"></i> 
+    </section>
+  
+  <!--  End Option Or Sitting Site Color-->
+     </ul>
+        <a href="#"><span title="Search"class="fa fa-search w3-padding"></span></a>
+        <a href="register.html"><span title="Sign In"class="fa fa-user-o w3-padding"></span></a>
+        <a href="#"><span title="Notifications"class="fa fa-bell-o w3-padding"></span></a>
+
+    </div>
+ 
+ 
+</nav>
+
+       <!--End Navbar With W3 Organiztion Property-->
+
+<!--ٍstart contact us section-->
+     
+     <section class="contact-page">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="contact-form">
+                        <h3>Feel Free to Contact us</h3>
+                        <ul class="cform">
+                           <li class="half pr-15">
+                              <input type="text" class="form-control" placeholder="Full Name">
+                           </li>
+                           <li class="half pl-15">
+                              <input type="text" class="form-control" placeholder="Email">
+                           </li>
+                           <li class="half pr-15">
+                              <input type="text" class="form-control" placeholder="Contact">
+                           </li>
+                           <li class="half pl-15">
+                              <input type="text" class="form-control" placeholder="Subject">
+                           </li>
+                           <li class="full">
+                              <textarea class="textarea-control" placeholder="Message"></textarea>
+                           </li>
+                           <li class="full">
+                              <input type="submit" value="Contact us" class="fsubmit">
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="google-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6894.514845810048!2d31.2612805!3d30.229734800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1597261359126!5m2!1sen!2seg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><!--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.02912911311!2d76.69348873658222!3d30.73506264436677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff67f9527319fe!2sChandigarh!5e0!3m2!1sen!2sin!4v1546673926029" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container contact-info">
+               <div class="row">
+                  <div class="col-md-12">
+                     <h3>Contact Information</h3>
+                  </div>
+                  <!--Contact Info Start-->
+                  <div class="col-md-4">
+                     <div class="c-info">
+                        <h6>Address:</h6>
+                        <p> 4700 Millenia Basvd # 143, Abcdef, FL 123456, Chandigarh </p>
+                     </div>
+                  </div>
+                  <!--Contact Info End--> 
+                  <!--Contact Info Start-->
+                  <div class="col-md-4">
+                     <div class="c-info">
+                        <h6>Contact:</h6>
+                        <p><strong>Phone:</strong> +1 234 2345 678-9</p>
+                        <p><strong>Fax:</strong> +1 321 2345 876-7</p>
+                     </div>
+                  </div>
+                  <!--Contact Info End--> 
+                  <!--Contact Info Start-->
+                  <div class="col-md-4">
+                     <div class="c-info">
+                        <h6>For More Information:</h6>
+                        <p><strong>Email:</strong> info@test.com</p>
+                        <p>contact@test.com</p>
+                     </div>
+                  </div>
+                  <!--Contact Info End--> 
+               </div>
+            </div>
+         </section>
+     
+<!--ٍend contact us section-->
+
+<!--Start The Footer-->
+ <div class="container-fluid"style="background-color: #e9ecef!important;">
+ <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">               
+        <div class="info col-sm-12 ">
+            
+            <div class="info-box col-lg-4 col-md-3 hidden-sm hidden-xs">
+            <h3>Drag With Visa</h3>
+            <ol class="unstyled-list">
+                <li><a>1-Step1</a></li>
+                <li><a>2-Step2</a></li>
+                <li><a>3-Step3</a></li>
+            </ol>
+                
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"id="visaa">
+                <ul class="visa unstyled-list"style="max-width: 100%">
+                <li><a><img src="../images/min/1200px-Commercial_International_Bank_logo.svg.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa2.jpg"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa3.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa4.png"alt="visaName1"title="visaName1"></a></li>
+                </ul>
+                </div>
+        </div>
+            
+            
+        <div class="info-box col-lg-2 col-md-2 hidden-sm hidden-xs"id="active">
+            <h3>Part 1</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+
+                        <div class="info-box col-lg-2 col-md-2 hidden-sm hidden-xs">
+            <h3>Part 2</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+
+            
+<div class="info-box col-lg-2 col-md-2 hidden-sm hidden-xs active">
+            <h3>Part 3</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+
+        </div>   
+     </div>
+ </div>
+ </div>
+
+     
+     
+     
+     
+     
+     
+     
+     
+     <div class="container-fluid"style="background-color: #e9ecef!important;">
+ <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="info col-sm-12 ">
+            
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md visible-sm visible-xs" type="button" 
+                                data-toggle="collapse" data-target="#collapsible0"style="width: 100%">
+                            <span class="fa fa-sort-down"style="color: #111;">1</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible0">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible0">
+            <h3>Drag With Visa</h3>
+            <ol class="unstyled-list">
+                <li><a>Step1</a></li>
+                <li><a>Step2</a></li>
+                <li><a>Step3</a></li>
+            </ol>
+                
+         <div class=""id="visaa">
+                <ul class="visa unstyled-list">
+                <li><a><img src="../images/min/1200px-Commercial_International_Bank_logo.svg.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa2.jpg"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa3.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa4.png"alt="visaName1"title="visaName1"></a></li>
+                </ul>
+                </div>
+        </div>
+            </div>
+            
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md visible-sm visible-xs" type="button" 
+                                 data-toggle="collapse" data-target="#collapsible1"style="width: 100%">
+                            <span class="fa fa-sort-down"style="color: #111;">2</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible1">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible1">
+            <h3>Part 1</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+            </div>
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md  visible-sm visible-xs" type="button" 
+                                data-toggle="collapse" data-target="#collapsible2"style="width: 100%">
+                            <span class="fa fa-sort-down"style="color: #111;">3</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible2">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible2">
+            <h3>Part 2</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+            </div>
+
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md visible-sm visible-xs" type="button" 
+                                data-toggle="collapse" data-target="#collapsible3"style="width: 100%">
+                             <span class="fa fa-sort-down"style="color: #111; ">4</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible3">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible3">
+         
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+            </div>
+        </div>   
+     </div>
+ </div>
+ </div>
+<!--     End The Footer-->
+     
+     
+<!--       Start The Copyright-->
+<div class=" w3-orange w3-wide w3-padding part1 container-fluid follow-us"style="background:#ced4da!important;">
+
+  
+<!--                   <div class="left-side">   This Block   Has All Of The line-->
+                  <span  class="w3-bar-item left-side"style="color: #111"><a title="Site Brand"href="#">
+                   </a>&copy;All Rights Is Saved</span>
+<!--                  </div>-->
+  
+                 <div class=" w3-right right-side">
+                   <span class=" fa fa-facebook-square facebook"style="color: #4267b2"><a href="#"
+                    title="visaName1"></a></span>
+                   <span class=" fa fa-youtube-square youtube"style="color: #fe0000"><a href="#"
+                    title="visaName2"></a></span>
+                    <span class="  fa fa-google-plus google"style="color: #dd4d42"><a href="#"
+                    title="visaName3"></a></span>
+                   <span class=" fa fa-whatsapp whatsapp"style="color: #25a417"><a href="#"
+                    title="visaName4"></a></span>
+                  </div>
+
+</div>
+<!--End The Copyright-->
+     
+                           
+        <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/plugins.js"></script>
+   </body>
+</html>

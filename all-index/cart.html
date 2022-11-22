@@ -1,0 +1,908 @@
+<!DOCTYPE HTML>
+<html lang="en"dir="ltr">
+ <head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA compatible"content="IE=edge">
+ <meta name="viewport"content="width=device-width, initial-scale=1.0">
+ <link rel="icon"href="../logo/min/maglin.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="../css/bootstrap.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="../css/bsEdit.css"> 
+ <link rel="stylesheet" href="../css/colorOption/default-Theme.css">
+     
+     <style>
+    
+/*
+         @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+*/
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Droid Serif", serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.wrap {
+  width: 75%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 5% 0;
+  margin-bottom: 5em;
+}
+
+.projTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  padding: 1em 0;
+  border-bottom: 1px solid #dadada;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.projTitle span {
+  font-family: "Droid Serif", serif;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #777;
+}
+
+.heading {
+  padding: 1em 0;
+  border-bottom: 1px solid #D0D0D0;
+}
+.heading h1 {
+  font-family: "Droid Serif", serif;
+  font-size: 2em;
+  float: left;
+}
+.heading a.continue:link, .heading a.continue:visited {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -.015em;
+  font-size: .75em;
+  padding: 1em;
+  color: #fff;
+  background: #ff9800;
+  font-weight: bold;
+  border-radius: 50px;
+  float: right;
+  text-align: right;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+.heading a.continue:after {
+  content: "\276f";
+  padding: .5em;
+  position: relative;
+  right: 0;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.heading a.continue:hover, .heading a.continue:focus, .heading a.continue:active {
+  background: #d27f05;
+}
+.heading a.continue:hover:after, .heading a.continue:focus:after, .heading a.continue:active:after {
+  right: -10px;
+}
+
+.tableHead {
+  display: table;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: .75em;
+}
+.tableHead li {
+  display: table-cell;
+  padding: 1em 0;
+  text-align: center;
+}
+.tableHead li.prodHeader {
+  text-align: left;
+}
+
+.cart {
+  padding: 1em 0;
+}
+.cart .items {
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 1.5em;
+  border-bottom: 1px solid #fafafa;
+}
+.cart .items.even {
+  background: #fafafa;
+}
+.cart .items .infoWrap {
+  display: table;
+  width: 100%;
+}
+.cart .items .cartSection {
+  display: table-cell;
+  vertical-align: middle;
+}
+.cart .items .cartSection .itemNumber {
+  font-size: .75em;
+  color: #777;
+  margin-bottom: .5em;
+}
+.cart .items .cartSection h3 {
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+}
+.cart .items .cartSection p {
+  display: inline-block;
+  font-size: .85em;
+  color: #777777;
+  font-family: "Montserrat", sans-serif;
+}
+.cart .items .cartSection p .quantity {
+  font-weight: bold;
+  color: #333;
+}
+.cart .items .cartSection p.stockStatus {
+  color: #ff9800;
+  font-weight: bold;
+  padding: .5em 0 0 1em;
+  text-transform: uppercase;
+}
+.cart .items .cartSection p.stockStatus.out {
+  color: #ff9800;
+}
+.cart .items .cartSection .itemImg {
+  width: 4em;
+  float: left;
+}
+.cart .items .cartSection.qtyWrap, .cart .items .cartSection.prodTotal {
+  text-align: center;
+}
+.cart .items .cartSection.qtyWrap p, .cart .items .cartSection.prodTotal p {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.cart .items .cartSection input.qty {
+  width: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: .25em;
+  margin: 1em .5em 0 0;
+}
+.cart .items .cartSection .itemImg {
+  width: 8em;
+  display: inline;
+  padding-right: 1em;
+}
+
+.special {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+}
+.special .specialContent {
+  padding: 1em 1em 0;
+  display: block;
+  margin-top: .5em;
+  border-top: 1px solid #dadada;
+}
+.special .specialContent:before {
+  content: "\21b3";
+  font-size: 1.5em;
+  margin-right: 1em;
+  color: #6f6f6f;
+  font-family: helvetica, arial, sans-serif;
+}
+
+a.remove {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: .5em;
+  font-size: .75em;
+  display: inline-block;
+  border-radius: 100%;
+  line-height: .85;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+a.remove:hover {
+  background: #f30;
+}
+
+.promoCode {
+  border: 2px solid #efefef;
+  float: left;
+  width: 35%;
+  padding: 2%;
+}
+.promoCode label {
+  display: block;
+  width: 100%;
+  font-style: italic;
+  font-size: 1.15em;
+  margin-bottom: .5em;
+  letter-spacing: -.025em;
+}
+.promoCode input {
+  width: 85%;
+  font-size: 1em;
+  padding: .5em;
+  float: left;
+  border: 1px solid #dadada;
+}
+.promoCode input:active, .promoCode input:focus {
+  outline: 0;
+}
+.promoCode a.btn {
+  float: left;
+  width: 15%;
+  padding: .75em 0;
+  border-radius: 0 1em 1em 0;
+  text-align: center;
+  border: 1px solid #ff9800;
+}
+.promoCode a.btn:hover {
+  border: 1px solid #d27f05;
+  background: #d27f05;
+}
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -.015em;
+  font-size: 1em;
+  padding: 1em 3em;
+  color: #fff;
+  background: #ff9800;
+  font-weight: bold;
+  border-radius: 50px;
+  float: right;
+  text-align: right;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+.btn:after {
+  content: "\276f";
+  padding: .5em;
+  position: relative;
+  right: 0;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.btn:hover, .btn:focus, .btn:active {
+  background: #d27f05;
+}
+.btn:hover:after, .btn:focus:after, .btn:active:after {
+  right: -10px;
+}
+.promoCode .btn {
+  font-size: .85em;
+  padding: .5em 2em;
+}
+
+/* TOTAL AND CHECKOUT  */
+.subtotal {
+  float: right;
+  width: 35%;
+}
+.subtotal .totalRow {
+  padding: .5em;
+  text-align: right;
+}
+.subtotal .totalRow.final {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.subtotal .totalRow span {
+  display: inline-block;
+  padding: 0 0 0 1em;
+  text-align: right;
+}
+.subtotal .totalRow .label {
+  font-family: "Montserrat", sans-serif;
+  font-size: .85em;
+  text-transform: uppercase;
+  color: #777;
+}
+.subtotal .totalRow .value {
+  letter-spacing: -.025em;
+  width: 35%;
+}
+
+@media only screen and (max-width: 39.375em) {
+  .wrap {
+    width: 98%;
+    padding: 2% 0;
+  }
+
+  .projTitle {
+    font-size: 1.5em;
+    padding: 10% 5%;
+  }
+
+  .heading {
+    padding: 1em;
+    font-size: 90%;
+  }
+
+  .cart .items .cartSection {
+    width: 90%;
+    display: block;
+    float: left;
+  }
+  .cart .items .cartSection.qtyWrap {
+    width: 10%;
+    text-align: center;
+    padding: .5em 0;
+    float: right;
+  }
+  .cart .items .cartSection.qtyWrap:before {
+    content: "QTY";
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    padding: .25em;
+    font-size: .75em;
+  }
+  .cart .items .cartSection.prodTotal, .cart .items .cartSection.removeWrap {
+    display: none;
+  }
+  .cart .items .cartSection .itemImg {
+    width: 25%;
+  }
+
+  .promoCode, .subtotal {
+    width: 100%;
+  }
+
+  a.btn.continue {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+     </style>
+ </head>
+ <body>
+  
+     <!--  Start Navbar-0 With W3 Organiztion Property  vertical-align: middle;-->
+<div class="w3-top  w3-orange w3-wide w3-padding w3-card"style="height:30px;">
+
+    <span  class="w3-bar-item"style="margin:auto;display: unset;padding: 0; vertical-align: super;position: relative;top: -4px;color: #FFF"><a title="Site Brand"href="#">
+                   </a>This Is Furniture Site</span>
+  
+                 <div class=" first-navbar w3-right w3-hide-small right-side">
+<!--
+                   <span class="w3-bar-item w3-button w3-color-white"style="display: unset;padding: 0; vertical-align: super;position: relative;top: -4px;"><a href="#"
+                    title="See Furniture"></a>Furniture</span>
+-->
+                   <a href="register.html"
+                     title="Follow Us"><span class="w3-bar-item fa fa-facebook-official"style="display: unset;padding: 0; vertical-align: super;position: relative;top:0;color: #FFF"></span></a>
+                    <a href="cart.html"
+                     title="Follow Us"><span class="w3-bar-item fa fa-shopping-cart"style="display: unset;padding: 0; vertical-align: super;position: relative;top:0;color: #FFF"></span></a>
+                  </div>
+
+</div>
+            <!-- End Navbar-0 With W3 Organiztion Property-->
+
+       <!--  Start Navbar With W3 Organiztion Property-->
+     
+<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center w3-card"
+     style="margin-top:32px;">
+ <!-- فى الشاشه الكبيره الاسم يختفى واللوجو والايكونز تظهر وفى الصغيره الاسم يظهر واللوجوه يختفى  -->
+
+ <a href="#" class="navbar-brand d-flex w-50 mr-auto w3-hide-large w3-hide-medium">     <!--  1  -->
+     Name</a>
+ 
+     <a href="#" class="navbar-brand d-flex w-50 mr-auto bg-visible md-visible sm-hidden
+                        xs-hidden w3-hide-small">                   <!--  2  -->
+      
+      <img class="img-responsive"title="logo"src="../logo/min/maglin.png"width="200px"height="50px;"></a>
+
+ 
+    <button class="navbar-toggler w3-grey w3-hover-white" type="button" 
+            data-toggle="collapse" data-target="#collapsibleNavbar">
+     
+        <span class="navbar-toggler-icon"></span>
+     <span class="sr-only">Toggle navigation</span>
+    </button>
+ 
+    <div class="navbar-collapse collapse w-100 h-142" id="collapsibleNavbar">
+        <ul class="navbar-nav w-100 justify-content-center"style="font-size:10px;">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+<!--
+            <li class="nav-item">
+                <a class="nav-link" href="//codeply.com">.EasyPay</a>
+            </li>
+-->
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.html">register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Product-Chairs.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+                     <li class="nav-item">
+                <a class="nav-link" href="Contact-Us.html">Contact Us</a>
+            </li>
+<!--  Start Color-Option Or Sitting Site Color-->
+   <section class="option-box">
+        <div class="color-option">
+            <h4>Color Option</h4>
+            <ul class="list-unstyled">
+                <li data-value="../css/colorOption/default-Theme.css"></li>
+                <li data-value="../css/colorOption/purple-Theme.css"></li>
+                <li data-value="../css/colorOption/blue-Theme.css"></li>
+                <li data-value="../css/colorOption/brown-Theme.css"></li>
+            </ul>
+        </div>
+        <i class= "fa fa-square fa-2x gear-check"></i> 
+    </section>
+  
+  <!--  End Option Or Sitting Site Color-->
+     </ul>
+        <a href="#"><span title="Search"class="fa fa-search w3-padding"></span></a>
+        <a href="register.html"><span title="Sign In"class="fa fa-user-o w3-padding"></span></a>
+        <a href="#"><span title="Notifications"class="fa fa-bell-o w3-padding"></span></a>
+
+    </div>
+ 
+ 
+</nav>
+
+       <!--End Navbar With W3 Organiztion Property-->
+     
+     
+<!--     Start The Cart Section-->
+     
+     <div class="wrap cf"id="flag">
+  <h1 class="projTitle">Responsive Table<span>-Less</span> Shopping Cart</h1>
+  <div class="heading cf">
+    <h1>My Cart</h1>
+    <a href="#" class="continue">Continue Shopping</a>
+  </div>
+  <div class="cart">
+<!--    <ul class="tableHead">
+      <li class="prodHeader">Product</li>
+      <li>Quantity</li>
+      <li>Total</li>
+       <li>Remove</li>
+    </ul>-->
+    <ul class="cartWrap">
+      <li class="items odd">
+        
+    <div class="infoWrap"> 
+        <div class="cartSection">
+        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+          <p class="itemNumber">#QUE-007544-002</p>
+          <h3>Item Name 1</h3>
+        
+           <p> <input type="text"  class="qty" placeholder="3"/> x $5.00</p>
+        
+          <p class="stockStatus"> In Stock</p>
+        </div>  
+    
+        
+        <div class="prodTotal cartSection">
+          <p>$15.00</p>
+        </div>
+              <div class="cartSection removeWrap">
+           <a href="#" class="remove">x</a>
+        </div>
+      </div>
+      </li>
+      <li class="items even">
+        
+       <div class="infoWrap"> 
+        <div class="cartSection">
+         
+        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+          <p class="itemNumber">#QUE-007544-002</p>
+          <h3>Item Name 1</h3>
+        
+           <p> <input type="text"  class="qty" placeholder="3"/> x $5.00</p>
+        
+          <p class="stockStatus"> In Stock</p>
+        </div>  
+    
+        
+        <div class="prodTotal cartSection">
+          <p>$15.00</p>
+        </div>
+              <div class="cartSection removeWrap">
+           <a href="#" class="remove">x</a>
+        </div>
+      </div>
+      </li>
+      
+            <li class="items odd">
+             <div class="infoWrap"> 
+        <div class="cartSection">
+            
+        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+          <p class="itemNumber">#QUE-007544-002</p>
+          <h3>Item Name 1</h3>
+        
+           <p> <input type="text"  class="qty" placeholder="3"/> x $5.00</p>
+        
+          <p class="stockStatus out"> Out of Stock</p>
+        </div>  
+    
+        
+        <div class="prodTotal cartSection">
+          <p>$15.00</p>
+        </div>
+                    <div class="cartSection removeWrap">
+           <a href="#" class="remove">x</a>
+        </div>
+              </div>
+      </li>
+      <li class="items even">
+       <div class="infoWrap"> 
+        <div class="cartSection info">
+             
+        <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
+          <p class="itemNumber">#QUE-007544-002</p>
+          <h3>Item Name 1</h3>
+        
+          <p> <input type="text"  class="qty" placeholder="3"/> x $5.00</p>
+        
+          <p class="stockStatus"> In Stock</p>
+          
+        </div>  
+    
+        
+        <div class="prodTotal cartSection">
+          <p>$15.00</p>
+        </div>
+    
+            <div class="cartSection removeWrap">
+           <a href="#" class="remove">x</a>
+        </div>
+         </div>
+         <div class="special"><div class="specialContent">Free gift with purchase!, gift wrap, etc!!</div></div>
+      </li>
+      
+      
+      <!--<li class="items even">Item 2</li>-->
+ 
+    </ul>
+  </div>
+  
+  <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
+  <a href="#" class="btn"id ="flag2"style="padding: 9px"></a></div>
+  
+  <div class="subtotal cf">
+    <ul>
+      <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
+      
+          <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+      
+            <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
+            <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
+      <li class="totalRow"><a href="#" class="btn continue">Checkout</a></li>
+    </ul>
+  </div>
+</div>
+     
+<!--     End The Cart Section-->
+
+
+<!--Start The Footer-->
+ <div class="container-fluid"style="background-color: #e9ecef!important;">
+ <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">               
+        <div class="info col-sm-12 ">
+            
+            <div class="info-box col-lg-4 col-md-3 hidden-sm hidden-xs">
+            <h3>Drag With Visa</h3>
+            <ol class="unstyled-list">
+                <li><a>1-Step1</a></li>
+                <li><a>2-Step2</a></li>
+                <li><a>3-Step3</a></li>
+            </ol>
+                
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"id="visaa">
+                <ul class="visa unstyled-list"style="max-width: 100%">
+                <li><a><img src="../images/min/1200px-Commercial_International_Bank_logo.svg.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa2.jpg"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa3.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa4.png"alt="visaName1"title="visaName1"></a></li>
+                </ul>
+                </div>
+        </div>
+            
+            
+        <div class="info-box col-lg-2 col-md-2 hidden-sm hidden-xs"id="active">
+            <h3>Part 1</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+
+                        <div class="info-box col-lg-2 col-md-2 hidden-sm hidden-xs">
+            <h3>Part 2</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+
+            
+<div class="info-box col-lg-2 col-md-2 hidden-sm hidden-xs active">
+            <h3>Part 3</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+
+        </div>   
+     </div>
+ </div>
+ </div>
+
+     
+     
+     
+     
+     
+     
+     
+     
+     <div class="container-fluid"style="background-color: #e9ecef!important;">
+ <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="info col-sm-12 ">
+            
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md visible-sm visible-xs" type="button" 
+                                data-toggle="collapse" data-target="#collapsible0"style="width: 100%">
+                            <span class="fa fa-sort-down"style="color: #111;">1</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible0">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible0">
+            <h3>Drag With Visa</h3>
+            <ol class="unstyled-list">
+                <li><a>Step1</a></li>
+                <li><a>Step2</a></li>
+                <li><a>Step3</a></li>
+            </ol>
+                
+         <div class=""id="visaa">
+                <ul class="visa unstyled-list">
+                <li><a><img src="../images/min/1200px-Commercial_International_Bank_logo.svg.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa2.jpg"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa3.png"alt="visaName1"title="visaName1"></a></li>
+                <li><a><img src="../images/min/visa4.png"alt="visaName1"title="visaName1"></a></li>
+                </ul>
+                </div>
+        </div>
+            </div>
+            
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md visible-sm visible-xs" type="button" 
+                                 data-toggle="collapse" data-target="#collapsible1"style="width: 100%">
+                            <span class="fa fa-sort-down"style="color: #111;">2</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible1">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible1">
+            <h3>Part 1</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+            </div>
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md  visible-sm visible-xs" type="button" 
+                                data-toggle="collapse" data-target="#collapsible2"style="width: 100%">
+                            <span class="fa fa-sort-down"style="color: #111;">3</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible2">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible2">
+            <h3>Part 2</h3>
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+            </div>
+
+                                 <button class="navbar-toggler w3-grey w3-hover-white hidden-lg hidden-md visible-sm visible-xs" type="button" 
+                                data-toggle="collapse" data-target="#collapsible3"style="width: 100%">
+                             <span class="fa fa-sort-down"style="color: #111; ">4</span>
+     </button>
+            <div class="hidden-lg hidden-md visible-sm visible-xs"id="collapsible3">
+<div class="info-box col-lg-2 col-md-2 col-sm-12 col-xs-12 activenavbar-collapse collapse w-100 h-142"id="collapsible3">
+         
+            <ul class="unstyled-list">
+                <li><a>Home</a></li>
+                <li><a>EasyPay</a></li>
+                <li><a>About</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Products</a></li>
+                <li><a>Brands</a></li>
+                <li><a>Contact Us</a></li>
+            </ul>
+        </div>
+            </div>
+        </div>   
+     </div>
+ </div>
+ </div>
+<!--     End The Footer-->
+     
+     
+<!--       Start The Copyright-->
+<div class=" w3-orange w3-wide w3-padding part1 container-fluid follow-us"style="background:#ced4da!important;">
+
+  
+<!--                   <div class="left-side">   This Block   Has All Of The line-->
+                  <span  class="w3-bar-item left-side"style="color: #111"><a title="Site Brand"href="#">
+                   </a>&copy;All Rights Is Saved</span>
+<!--                  </div>-->
+  
+                 <div class=" w3-right right-side">
+                   <span class=" fa fa-facebook-square facebook"style="color: #4267b2"><a href="#"
+                    title="visaName1"></a></span>
+                   <span class=" fa fa-youtube-square youtube"style="color: #fe0000"><a href="#"
+                    title="visaName2"></a></span>
+                    <span class="  fa fa-google-plus google"style="color: #dd4d42"><a href="#"
+                    title="visaName3"></a></span>
+                   <span class=" fa fa-whatsapp whatsapp"style="color: #25a417"><a href="#"
+                    title="visaName4"></a></span>
+                  </div>
+
+</div>
+<!--End The Copyright-->
+     
+                           
+        <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/plugins.js"></script>
+     <script>
+     // Remove Items From Cart
+$('a.remove').click(function(){
+  event.preventDefault();
+  $( this ).parent().parent().parent().hide( 400 );
+ 
+})
+
+// Just for testing, show all items
+  $('a.btn.continue').click(function(){
+    $('li.items').show(400);
+  })
+
+  
+     </script>
+   </body>
+</html>
