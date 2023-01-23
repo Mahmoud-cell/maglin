@@ -1,3 +1,6 @@
+/*public*/
+body {overflow-x: hidden};
+ol,ul {padding: 0};
 /*start f-show*/
 .search-show{
     display: none;
@@ -230,7 +233,7 @@ font-weight: bold;
 }
 .info .info-box h3
 {
-    margin: 10px -40px 10px 0;
+    /*margin: 10px -40px 10px 0;*/
 
 }
 .visa li 
